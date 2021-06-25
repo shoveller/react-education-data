@@ -11,6 +11,10 @@ export class HelloClass extends React.Component {
     console.log("마운트 됨");
   }
 
+  componentWillUnmount() {
+    console.log("삭제 됨");
+  }
+
   componentDidUpdate() {
     console.log("상태 변경됨");
   }

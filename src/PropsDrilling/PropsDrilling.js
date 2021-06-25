@@ -1,4 +1,7 @@
 import React from "react";
+import { MinusButton } from "./MinusButton";
+import { PlusButton } from "./PlusButton";
+import { NumberViewer } from "./NumberViewer";
 
 export const PropsDrilling = (props) => {
   const [number, setNumber] = React.useState(0);
@@ -7,9 +10,9 @@ export const PropsDrilling = (props) => {
 
   return (
     <>
-      <button onClick={onMinus}>-</button>
-      <div>{number}</div>
-      <button onClick={onPlus}>+</button>
+      <MinusButton onClick={onMinus} />
+      <NumberViewer value={number} />
+      <PlusButton onClick={onPlus} />
       {props.children}
     </>
   );
